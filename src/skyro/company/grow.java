@@ -8,7 +8,9 @@ public class grow {
         for (int a : array) {
             System.out.print(a + " ");
         }
-        int arr2[] = Arrays.copyOf(array, index + 1);
+        double r1=array.length*1.5;
+        int r = (int) r1;
+        int arr2[] = Arrays.copyOf(array, r);
         System.out.println();
         for (int a : arr2) {
             System.out.print(a + " ");
