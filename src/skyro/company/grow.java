@@ -4,7 +4,7 @@ package skyro.company;
 import java.util.Arrays;
 
 public class grow {
-    public static void extendArraySize(int[] array, int item, int index) {
+    public static int[] extendArraySize(int[] array, int item, int index) {
         for (int a : array) {
         }
         double r1=array.length*1.5;
@@ -17,13 +17,14 @@ public class grow {
         for (int a : arr2) {
             System.out.print(a + " ");
         }
+        return arr2;
     }
-
     public static void add(int[] ints, int item, int index) {
+        int arrNew[] = new int[0];
         if (ints.length < index) {
-           extendArraySize(ints, item, index);
+            arrNew = extendArraySize(ints, item, index);
         }
-        int arrNew[] = Arrays.copyOf(ints, ints.length);
+
         arrNew[index] = item;
         for (int i : arrNew) {
             System.out.print(i + " ");
